@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'posts' ,#Our app
     'corsheaders',
     'graphene_django',
-   
+  
 
 ]
 
@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django.contrib.auth.middleware.AuthenticationMiddleware",
 ]
-
+# Adding authentication as per django-graphene documentation
 AUTHENTICATION_BACKENDS = [
     "graphql_jwt.backends.JSONWebTokenBackend",
     "django.contrib.auth.backends.ModelBackend",
@@ -124,8 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[BASE_DIR,'frontend/build/static'
-]
+STATICFILES_DIRS=[BASE_DIR,'mainapp/build/static'
+] # For react static files 
 
 
 

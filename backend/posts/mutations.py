@@ -12,7 +12,7 @@ class UserCreate(Mutation):
     class Arguments:
         username = String(required=True)
         password = String(required=True)
-        email = String(required=True)
+        email = String(required=True) # can be added but for testing purposes let  just comment it out 
 
     # 3. Create new user model
     def mutate(self, info, username, password, email):
